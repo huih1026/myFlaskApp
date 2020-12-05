@@ -1,4 +1,0 @@
-browser-sync start --server --directory --files "*"
-
-new-item  command to create a new file
-get-content command to view the content of the file
