@@ -1,3 +1,21 @@
+myFlaskApp:
+
+- Technology used:
+	- Python 3
+	- Flask (Flask/render_template/flash/redirect/url_for/session/logging)
+	- HTML & CSS
+	- MySQL
+	- Flask library(flask-mysqldb/flask-wtf/passlib:
+		- Flask-MySQLdb (lib: Provide MySQL connection for Flask)
+	    - Flask-WTF (lib: provide the interactive user interface for the user.
+	      The WTF is a built-in module of the flask which provides an 
+	      alternative way of designing forms in the flask web applications.)
+	- Jinja (No need to install)
+	
+
+
+
+
 1. Track stock performance
 2. Establish a watching stock pool, monitor all highs and lows, give alert when
    watching stock reach buypoint (setup a buypoint such as lows a precentage)
