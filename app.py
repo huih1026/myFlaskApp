@@ -18,9 +18,8 @@ app.config['MYSQL_CURSOR'] = 'DictCursor'
 # init MYSQL
 mysql = MySQL(app)
 
-
+# local data file
 Articles = Articles()
-
 
 # given the route to let the broswer to find
 @app.route('/')
@@ -55,6 +54,13 @@ class RegisterForm(Form):
 		validators.EqualTo('confirm', message='Passwords Not Match')])
 	confirm = PasswordField('Confirm Password')
 
+'''
+When click or browser see the route /register, it would run register(), 
+but now it has no data posted, if statement won't be executed, last reach
+return, register.html will be rendered, Next, if click [submit] button with
+the data entered, then request.form will be filled with data, if will get
+executed. 
+'''
 @app.route('/register', methods=['GET', 'POST'])
 def register():
 	form = RegisterForm(request.form)
@@ -77,9 +83,11 @@ def register():
 
 		flash('You are now regiseterd and can log in', 'success')
 
-		redirect(url_for('index'))
+		return redirect(url_for('index'))
 
-	return render_template('home.html', form=form)
+	# register.html must be render, not other page, becasue initially this page will be
+	# shown, then waiting the input data then will goes to if statement.
+	return render_template('register.html', form=form)
 
 
 if __name__ == '__main__':
