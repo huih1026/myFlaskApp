@@ -14,6 +14,12 @@ myFlaskApp:
 	
 
 
+- References:
+	- https://getbootstrap.com/docs/4.5/layout/overview/
+	- https://wtforms.readthedocs.io/en/2.3.x/forms/#the-form-class
+	- https://flask.palletsprojects.com/en/1.1.x/patterns/wtforms/ 
+	- https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/
+
 
 
 1. Track stock performance
